@@ -1,0 +1,3629 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&family=Black+Ops+One&family=Orbitron:wght@500&family=Rubik:wght@500&display=swap');
+
+
+.switch {
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  border-radius: 15px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 5px;
+  left: 31px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+
+.sun svg, .moon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid rgba(255, 166, 0, 0.218);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color:orange;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgb(255, 199, 96);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid orange;
+  border-right: 3px solid orange;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+
+.loader span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+
+.loader span::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgb(255, 168, 6);
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px 5px rgb(255, 175, 27);
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+
+ 
+
+ 
+
+/*DARK MODE CSS------------------------------------------------------------------------------------------------->*/
+
+
+body.dark-mode {
+  background-color:rgb(8, 8, 8);
+  color: white;
+  }
+
+  body.dark-mode .typewrite, body.dark-mode .wrap {
+    border-right:  0.05em solid #fff;
+    }
+
+ body.dark-mode .my-picture img {
+        outline-color: white;
+    }
+
+
+ body.dark-mode header {
+    background-color: black;
+  }
+
+ body.dark-mode header #branding h1 {
+    color: orange;
+    }
+
+    body.dark-mode header .highlight {
+      color: white;
+      }
+
+    /*ABOUT ME*/
+  body.dark-mode .about-container {
+        background-color:  rgb(33, 33, 33);
+     box-shadow: none;
+      }
+      
+  body.dark-mode .about-container p, body.dark-mode .about-container h3 {
+       color: white;
+      }
+
+      /*PORTFOLIO*/
+      body.dark-mode .projects {
+        background-color:  rgb(33, 33, 33);
+        border: none;
+        box-shadow: none;
+      }
+
+      /*SERVICE*/
+
+  body.dark-mode .service-container {
+    background-color:  rgb(33, 33, 33);
+       box-shadow: none;
+        }
+
+  body.dark-mode .service-container h3 {
+    color: white;
+  }
+    
+  body.dark-mode .contact-portion p {
+    color: white;
+  }
+
+  /*SKILLS*/
+
+  body.dark-mode .skills {
+     color: white;
+     background-color:  rgb(33, 33, 33);
+     box-shadow: none;
+     border: none;
+  }
+
+  body.dark-mode .skill-portion p {
+    color: white;
+  }
+
+  /*CONTACT*/
+
+  body.dark-mode .message-box input[type="text"] {
+     background-color: white;
+     color: black;
+    }
+
+  body.dark-mode .message-box input[type="email"] {
+    background-color: white;
+    color: black;
+  }
+    
+  body.dark-mode .message-box textarea {
+   background-color: white;
+   color: black;
+    }
+
+    body.dark-mode .message-box input[type="text"]::placeholder, body.dark-mode .message-box input[type="email"]::placeholder {
+      color: black;
+     }
+     
+   body.dark-mode .message-box textarea::placeholder {
+    color: black;
+     }
+    
+
+  /*END*/
+
+   body.dark-mode .end #branding p1 {
+    color: #fff;
+    }
+
+
+  
+    
+
+/*--------------------------------------------------------------------------------------------------------->>>*/
+
+
+ 
+ 
+ /*LIGHTT MODE MODE CSS----------------------------------------------------------------------------------------->>>*/
+
+ body {
+  background-color:#f7f7f7;
+  font-family: 'Rubik', sans-serif;
+  overflow-x: hidden;
+  transition: background-color 1.2s, color 0.8s;
+  animation: darkModeTransition 1s ease-in-out;
+}
+
+
+header { 
+transition: background-color 1.2s, color 0.8s;
+background-color: white;
+padding-top: 30px;
+min-height: 50px;
+}
+
+header a {
+color: #fff;
+text-decoration: none;
+font-size: 12px;
+font-weight: bold;
+}
+
+header li {
+float: left;
+display: inline;
+padding: 0 20px 0 20px;
+margin-top: -15px;
+}
+
+header #branding {
+float: left;
+}
+
+header #branding h1 {
+color: orange;
+font-size: 25px;
+margin: 0 auto;
+margin-left: 130px;
+font-weight: bold;
+}
+
+header nav {
+float: right;
+margin:0;
+margin-right: 130px;
+}
+
+header a:hover {
+color: orange;
+font-weight: bold;
+}
+
+header .current a {
+color: orange;
+font-weight: bold;
+}
+
+.highlight {
+color: black;
+}
+
+/*INFOORMATION PORTION*/
+
+.info {
+margin-left: 140px;
+padding-top: 82px;
+}
+
+.info h2 {
+font-size: 36px;
+}
+
+.info h1 {
+font-size: 61px;
+color: orange;
+margin-top: -16px;
+margin-bottom: 5px;
+margin-left: -5px;
+font-weight: bolder;
+}
+
+.typewrite {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+.typewrte, .wrap {
+border-right:  0.05em solid #000;
+}
+
+.info p {
+font-size: 20px;
+margin-bottom: -6px;
+}
+
+.info button {
+ width: 192px;
+ height: 55px;
+ border: 3px solid orange;
+ background-color: transparent;
+ color: orange;
+ border-radius: 8px;
+ font-weight: bolder;
+ font-size: 17px;
+ margin-top: 35px;
+ margin-bottom: 7px;
+}
+
+.info button:hover {
+  transition: background-color 0.5s, color 0.7s;
+  transition-delay: 0s;
+  background-color: orange;
+  color:#fff;
+}
+
+.container-info {
+margin-bottom: 140px;
+}
+
+/*SOCIAL MEDIA BAR*/
+
+.social-media-bar {
+display: flex;
+padding: 20px 0;
+margin-left: 141px;
+}
+
+.social-logo {
+display: block;
+width: 45px;
+height: 40px;
+margin: 0 3px;
+transition: transform 0.2s ease;
+}
+
+.social-logo img {
+width: 50%;
+height: 100%;
+object-fit: contain;
+}
+
+.social-logo:hover {
+transform: scale(1.2);
+}
+
+/*MY PICTURE*/
+
+.my-picture {
+float:right;
+margin-left: 400px;
+margin-right: 80px;
+padding-top: 82px;
+}
+
+.my-picture img {
+width: 436px;
+transition: transform 0.2s ease;
+
+}
+
+
+.my-picture img{
+  animation: imgg 2s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes  imgg {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-22px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.container-info {
+display: flex;
+}
+
+/*OTHERS*/
+
+h3 {
+font-size: 40px;
+text-align: center;
+margin-bottom: 40px;
+margin-top: 250px;
+}
+
+.title-highlight {
+  color: orange;
+}
+
+
+
+/*ABOUT ME PORTION */
+
+.about-container {
+width: 80%;
+height: 500px;
+margin: 0 auto;
+border-radius: 15px;
+position: relative;
+background-color: #eeeeee;
+border-width: 3px;
+box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+-webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+-moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+display: flex;
+}
+
+.about-me p4 {
+font-size: 30px;
+font-weight: bold;
+}
+
+.about-me p {
+font-size: 20px;
+}
+
+.about-picture {
+  float: left;
+  margin-left: 10px;
+  
+}
+
+.about-me {
+  float: right;
+  margin-right: 35px;
+  margin-top: 80px;
+  flex: 1 1 auto;
+  margin-left: -280px;
+}
+
+.about-picture img {
+  width: 50%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+
+.about-portion button {
+  height: 40px;
+  width: 170px;
+  font-size: 16px;
+  border: 2px solid orange;
+  border-radius: 3px;
+  color: orange;
+  background-color: transparent;
+  margin-top: 50px;
+  font-weight: bolder;
+}
+
+.about-portion button:hover {
+  background-color: orange;
+  color: black;
+  border: 2px solid black;
+  transition: background-color 0.8s, color 0.7s;
+}
+
+/*PORTFOLIO PORTION*/
+
+.portfolio-portion {
+  margin-top: 140px;
+}
+
+.portfolio-portion p {
+  text-align: center;
+   margin-top: -32px; 
+   margin-bottom: 50px;
+  }
+
+  .portfolio-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .projects {
+    display: inline-flex;
+    flex-direction: column;
+    width: 375px;
+    height: 480px;
+    border: 1px solid gainsboro;
+    margin: 0 15px;
+    margin-top: 30px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+-webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+-moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+transition: transform 0.2s ease;
+  }
+
+  .projects video {
+    border-radius: 3px;
+  }
+
+  .card-body {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .card-body h5 {
+    font-size: 23px;
+    margin-bottom: 5%;
+  }
+
+  .card-body p1 {
+    font-size: 17px;
+    margin-right: 20px;
+  }
+  
+/*SERVICE PORTION*/
+
+.service-portion {
+margin-top: 140px;
+}
+
+.service-container {
+width: 80%;
+height: 500px;
+border-style: solid;
+border-color: orange;
+border-width: 3px;
+box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+-webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+-moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+margin: 0 auto;
+border-radius: 15px;
+position: relative;
+background-color: #eeeeee;
+}
+
+.service-container h3 {
+font-size: 40px;
+color: black;
+text-align: center;
+margin-top: 200px;
+}
+
+
+
+
+/*SKILLS PORTION*/
+
+.skill-portion {
+margin-top: 140px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skills {
+padding: 15px;
+border: solid 1px gainsboro;
+background-color: #eeeeee;
+margin-bottom: 14px;
+border-radius: 25px;
+display: inline-flex;
+width: 28%;
+height: 380px;
+box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+-webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+-moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+}
+
+.skills-name {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -315px;
+  margin-left: 25px;
+}
+
+.skills h1 {
+  font-size: 23px;
+  margin-left: 30px;
+}
+
+.skill-portion p {
+  color: black; 
+  text-align: center;
+   margin-top: -32px; 
+   margin-bottom: 50px;
+  }
+
+.flex-container-1 {
+  display: flex;
+  justify-content: space-evenly; /* Adjust as needed */
+  align-items: center;
+  padding: 20px;
+  margin-top: -110px;
+  margin-left: -200px;
+}
+
+.flex-container-2 {
+  display: flex;
+  justify-content: space-evenly; /* Adjust as needed */
+  align-items: center;
+  padding: 20px;
+  margin-top: -110px;
+  margin-left: -184px;
+}
+
+.flex-item {
+  flex: 1;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.flex-item p {
+  font-weight: bolder;
+  font-size: 13px;
+  margin-top: -3px;
+  margin-left: -6px;
+}
+
+.flex-item img {
+  width: 80px;
+  height: auto;
+  margin-right: 12px;
+}
+
+.flex-item:hover {
+  transform: scale(1.2);
+  }
+
+
+@keyframes progressAnimation {
+0% {
+    width: 0;
+}
+100% {
+    width: 100%;
+}
+}
+
+
+/*CONTACT PORTION */
+
+.contact-portion {
+margin-top: 140px;
+}
+
+.message-box {
+text-align: center;
+}
+
+.contact-icon {
+float: left;
+}
+
+.contact-icon h1 {
+font-size: 30px;
+color: #fff;
+margin-top: 50px;
+}
+
+.contact-info {
+display: inline-flex;
+margin-left: 93px;
+margin-bottom: 30px;
+}
+
+.contact-icon img {
+width: 10%;
+border-radius: 100%;
+margin-right: 20px;
+}
+
+.message-box input[type="text"], .message-box input[type="email"] {
+font-weight: bolder;
+width: 500px;
+height: 45px;
+margin-bottom: 17px;
+border-radius: 16px;
+font-size: 14px;
+background-color: black;
+color: white;
+}
+
+.message-box textarea {
+font-weight: bolder;
+width: 500px; 
+height: 220px;
+border-radius: 16px;
+font-size: 17px;
+background-color: black;
+color: white;
+}
+
+.message-box input[type="submit"] {
+margin-top: 30px;
+width: 280px;
+height: 50px;
+border-radius: 40px;
+font-size: 15px;
+background-color: orange;
+color: #fff;
+font-weight: bolder;
+}
+
+.message-box input[type="submit"]:hover {
+border-style: solid;
+border-width: 3px;
+border-color: white;
+font-weight: bolder;
+background-color: rgb(255, 184, 53);
+}
+
+.contact-portion p {
+color: black; 
+text-align: center;
+ margin-top: -32px; 
+ margin-bottom: 50px;
+}
+
+.message-box input[type="text"]::placeholder, .message-box input[type="email"]::placeholder {
+  color: white;
+ }
+ 
+.message-box textarea::placeholder {
+color: white;
+ }
+
+
+/*END PORTION*/
+
+/*SOCIAL MEDIA BAR*/
+
+.social-media-bar-end {
+display: flex;
+padding: 10px 0;
+float: right;
+margin-top: -10px;
+margin-right: 80px;
+}
+
+.social-logo-end {
+display: block;
+width: 45px;
+height: 40px;
+margin: 0 3px;
+}
+
+.social-logo-end h1 {
+  font-size: 17px;
+}
+
+.social-logo-end .highlight {
+  color: orange;
+  font-size: 17px;
+  }
+
+.end #branding {
+float: left;
+margin: 0 auto;
+margin-left: 80px;
+margin-top: 11px;
+}
+
+.end #branding p1 {
+color: black;
+font-size: 17px;
+}
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------->>*/
+ /*RESPONSIVE CSS STYLE*/
+
+
+@media (max-width: 355px) {
+  html {
+    overflow-x: hidden;
+    justify-content: center;
+}
+
+
+
+ /* Adjust header styles */
+ header {
+     padding-top: 10px;
+     min-height: 40px;
+ }
+ header #branding h1 {
+     font-size: 24px;
+     margin-left: 30px;
+     font-weight: bold;
+ }
+ header nav {
+     margin-right: 10px;
+ }
+
+ h3 {
+  font-size: 27px;
+ }
+
+ /* Adjust .info and .my-picture sections */
+
+  .container-info {
+    flex-direction: column;
+  }
+
+ .info {
+     margin: 20px;
+     padding-top: 90px;
+     margin-left: 35px;
+ }
+
+ .info h2 {
+  font-size: 27px;
+  }
+  
+  .info h1 {
+  font-size: 36px;
+  color: orange;
+
+  }
+  
+  .info p {
+  font-size: 12px;
+  margin-bottom: -6px;
+  }
+  
+  .info button {
+   width: 188px;
+   height: 45px;
+   margin-bottom: -18px;
+
+  }
+
+  .social-media-bar {
+    padding: 10px 0;
+    margin-left: 35px;
+    }
+    
+
+    .my-picture {
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .my-picture img {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+
+ /* Adjust .about-container, .service-container, .skills, .contact-container */
+ .about-container, .service-container, .skills, .contact-container {
+     width: 88%;
+     margin-left: 16px;
+     margin: 0 auto;
+
+ }
+
+ /*ABOUT PORTION*/
+ 
+ .about-container {
+  display: block;
+  height: 540px;
+ }
+
+ .about-me p4 {
+  font-size: 17px;
+  font-weight: bold;
+  }
+  
+  .about-me p {
+  font-size: 12px;
+  margin-bottom: -7px;
+  }
+  
+  .about-picture {
+    margin-left: 78px;   
+  }
+  
+  .about-me {
+    margin-right: 10px;
+    margin-top: 30px;
+    flex: 1 1 auto;
+    margin-left: 30px;
+  }
+  
+  .about-picture img {
+    width: 67%;
+    margin-top: 25px;
+    border-radius: 10px;
+  }
+
+  .about-portion .about-p {
+    font-size: 13px;
+  }
+
+  .about-portion button {
+    font-size: 14px;
+   width: 120px;
+  }
+  
+
+  /*PORTFOLIO PORTION*/
+
+  .portfolio-portion p {
+    text-align: center;
+     margin-top: -32px; 
+     margin-bottom: 50px;
+    }
+  
+    .portfolio-container {
+      display: block;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .projects {
+      text-align:left;
+      width: 250px;
+      height: 430px;
+      border: 1px solid gainsboro;
+      margin: 0 10px;
+      margin-left: 19px;
+      margin-bottom: 20px;
+      background-color: #eeeeee;
+      border-radius: 5px;
+      box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+  -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+  -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    }
+  
+    .projects video {
+      border-radius: 3px;
+    }
+  
+    .card-body {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .card-body h5 {
+      font-size: 20px;
+      margin-bottom: 5%;
+    }
+  
+    .card-body p1 {
+      font-size: 14px;
+      margin-right: 20px;
+    }
+    
+    .portfolio-portion p {
+      font-size: 13px;
+    }
+
+    /*SERVICE PORTION*/
+
+    .service-portion {
+      margin-top: 110px;
+      }
+
+      .service-portion p {
+        font-size: 12px;
+      }
+
+      .service-container h3 {
+        font-size: 20px;
+      }
+
+
+ /* SKILL PORTION */
+
+ .skill-portion p {
+  font-size: 11px;;
+ }
+
+ .skills h1 {
+  font-size: 21px;
+ }
+
+ .skills img {
+  width: 60px;
+ }
+
+ .skills-container {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.skills {
+  margin-left: -4px;
+  padding: 15px;
+  border: solid 1px gainsboro;
+  background-color: #eeeeee;
+  margin-bottom: 40px;
+  border-radius: 25px;
+  width: 80%;
+  box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+  -webkit-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+  -moz-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+}
+
+.flex-container-1 {
+  display: flex;
+  justify-content: space-evenly; /* Adjust as needed */
+  align-items: center;
+  padding: 20px;
+  margin-top: -20px;
+  margin-left: -200px;
+}
+
+.flex-container-2 {
+  display: flex;
+  justify-content: space-evenly; /* Adjust as needed */
+  align-items: center;
+  padding: 20px;
+  margin-top: -20px;
+  margin-left: -184px;
+}
+
+.flex-item {
+  flex: 1;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+
+/*CONTACT PORTION*/
+
+.contact-portion {
+  margin-top: 100px;
+}
+ 
+.contact-portion p {
+  font-size: 13px;
+}
+
+ /* Adjust .message-box inputs and textarea */
+ .message-box input[type="text"],
+ .message-box input[type="email"],
+ .message-box textarea {
+     width: 80%;
+     padding: 8px;
+ }
+
+ /* Adjust social media*/
+  
+ .message-box input[type="text"],
+ .message-box input[type="email"],
+ .message-box textarea {
+     width: 80%;
+     padding: 8px;
+ }
+
+ /* Adjust social media bar at the end */
+ .social-media-bar-end {
+     margin-right: 10px;
+ }
+ .social-logo-end h1 {
+  font-size: 14px;
+  margin-top: 13px;
+}
+
+ .end #branding {
+     margin-left: 10px;
+ }
+
+ .end #branding p1 {
+  color: black;
+  font-size: 14px;
+  }
+
+  .social-logo-end .highlight {
+    font-size: 14px;
+    }
+}
+
+@media (min-width: 355px) and (max-width: 387px) {
+  
+  html {
+      overflow-x: hidden;
+      justify-content: center;
+  }
+
+
+
+   /* Adjust header styles */
+   header {
+       padding-top: 10px;
+       min-height: 40px;
+   }
+   header #branding h1 {
+       font-size: 24px;
+       margin-left: 30px;
+       font-weight: bold;
+   }
+   header nav {
+       margin-right: 10px;
+   }
+
+   h3 {
+    font-size: 30px;
+   }
+
+   /* Adjust .info and .my-picture sections */
+
+   .container-info {
+    flex-direction: column;
+  }
+
+   .info {
+       margin: 20px;
+       padding-top: 100px;
+       margin-left: 35px;
+   }
+
+   .info h2 {
+    font-size: 30px;
+    }
+    
+    .info h1 {
+    font-size: 39px;
+    color: orange;
+
+    }
+    
+    .info p {
+    font-size: 15px;
+    margin-bottom: -6px;
+    }
+    
+    .info button {
+     width: 188px;
+     height: 50px;
+     margin-bottom: -18px;
+
+    }
+
+    .social-media-bar {
+      padding: 10px 0;
+      margin-left: 35px;
+      }
+      
+
+      .my-picture {
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    
+      .my-picture img {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+   /* Adjust .about-container, .service-container, .skills, .contact-container */
+   .about-container, .service-container, .skills, .contact-container {
+       width: 88%;
+       margin-left: 16px;
+       margin: 0 auto;
+
+   }
+
+   /*ABOUT PORTION*/
+   
+   .about-container {
+    display: block;
+    height: 580px;
+   }
+
+   .about-me p4 {
+    font-size: 19px;
+    font-weight: bold;
+    }
+    
+    .about-me p {
+    font-size: 14px;
+    margin-bottom: -7px;
+    }
+    
+    .about-picture {
+      margin-left: 78px;   
+    }
+    
+    .about-me {
+      margin-right: 10px;
+      margin-top: 30px;
+      flex: 1 1 auto;
+      margin-left: 30px;
+    }
+    
+    .about-picture img {
+      width: 67%;
+      margin-top: 25px;
+      border-radius: 10px;
+    }
+
+    .about-portion .about-p {
+      font-size: 13px;
+    }
+
+    .about-portion button {
+      font-size: 14px;
+     width: 130px;
+    }
+    
+
+    /*PORTFOLIO PORTION*/
+
+    .portfolio-portion p {
+      text-align: center;
+       margin-top: -32px; 
+       margin-bottom: 50px;
+      }
+    
+      .portfolio-container {
+        display: block;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .projects {
+        text-align:left;
+        width: 300px;
+        height: 480px;
+        border: 1px solid gainsboro;
+        margin: 0 10px;
+        margin-left: 19px;
+        margin-bottom: 20px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+        box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+      }
+    
+      .projects video {
+        border-radius: 3px;
+      }
+    
+      .card-body {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+      .card-body h5 {
+        font-size: 23px;
+        margin-bottom: 5%;
+      }
+    
+      .card-body p1 {
+        font-size: 17px;
+        margin-right: 20px;
+      }
+      
+      .portfolio-portion p {
+        font-size: 13px;
+      }
+
+      /*SERVICE PORTION*/
+
+      .service-portion {
+        margin-top: 110px;
+        }
+
+        .service-portion p {
+          font-size: 12px;
+        }
+
+        .service-container h3 {
+          font-size: 30px;
+        }
+
+
+   /* SKILL PORTION */
+
+   .skill-portion p {
+    font-size: 13px;;
+   }
+  
+   .skills-container {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .skills {
+    margin-left: -4px;
+    padding: 15px;
+    border: solid 1px gainsboro;
+    background-color: #eeeeee;
+    margin-bottom: 40px;
+    border-radius: 25px;
+    width: 80%;
+    box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+  }
+
+  .flex-item img {
+    width: 65px;
+    height: auto;
+    margin-right: 12px;
+  }
+  
+  .flex-container-1 {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: -200px;
+  }
+  
+  .flex-container-2 {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: -184px;
+  }
+  
+  .flex-item {
+    flex: 1;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+
+  /*CONTACT PORTION*/
+
+  .contact-portion {
+    margin-top: 100px;
+  }
+   
+  .contact-portion p {
+    font-size: 13px;
+  }
+
+   /* Adjust .message-box inputs and textarea */
+   .message-box input[type="text"],
+   .message-box input[type="email"],
+   .message-box textarea {
+       width: 80%;
+       padding: 8px;
+   }
+
+   /* Adjust social media*/
+    
+   .message-box input[type="text"],
+   .message-box input[type="email"],
+   .message-box textarea {
+       width: 80%;
+       padding: 8px;
+   }
+
+   /* Adjust social media bar at the end */
+   .social-media-bar-end {
+       margin-right: 10px;
+   }
+   .social-logo-end h1 {
+    font-size: 14px;
+    margin-top: 13px;
+  }
+
+   .end #branding {
+       margin-left: 10px;
+   }
+
+   .end #branding p1 {
+    color: black;
+    font-size: 14px;
+    }
+
+    .social-logo-end .highlight {
+      font-size: 14px;
+      }
+  }
+
+@media (min-width: 387px) and (max-width: 490px) {
+
+  html {
+    justify-content: center;
+    overflow-x: hidden;
+  }
+   /* Adjust header styles */
+   header {
+       padding-top: 10px;
+       min-height: 40px;
+   }
+   header #branding h1 {
+       font-size: 24px;
+       margin-left: 30px;
+       font-weight: bold;
+   }
+   header nav {
+       margin-right: 10px;
+   }
+
+   h3 {
+    font-size: 30px;
+   }
+
+   /* Adjust .info and .my-picture sections */
+   .container-info {
+    flex-direction:column;
+   }
+
+   .info {
+       margin: 20px;
+       padding-top: 100px;
+       margin-left: 55px;
+   }
+
+   .info h2 {
+    font-size: 30px;
+    }
+    
+    .info h1 {
+    font-size: 39px;
+    color: orange;
+
+    }
+    
+    .info p {
+    font-size: 15px;
+    margin-bottom: -6px;
+    }
+    
+    .info button {
+     width: 188px;
+     height: 50px;
+     margin-bottom: -18px;
+
+    }
+
+    .social-media-bar {
+      padding: 10px 0;
+      margin-left: 55px;
+      }
+      
+
+      .my-picture {
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    
+      .my-picture img {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+   /* Adjust .about-container, .service-container, .skills, .contact-container */
+   .about-container, .service-container, .skills, .contact-container {
+       width: 90%;
+       margin-left: 19px;
+       margin: 0 auto;
+   }
+
+   /*ABOUT PORTION*/
+   
+   .about-container {
+    display: block;
+    height: 600px;
+   }
+
+   .about-me p4 {
+    font-size: 19px;
+    font-weight: bold;
+    }
+    
+    .about-me p {
+    font-size: 14px;
+    margin-bottom: -7px;
+    }
+    
+    .about-picture {
+      margin-left: 105px;   
+    }
+    
+    .about-me {
+      margin-right: 10px;
+      margin-top: 30px;
+      flex: 1 1 auto;
+      margin-left: 30px;
+    }
+    
+    .about-picture img {
+      width: 60%;
+      margin-top: 25px;
+      border-radius: 10px;
+    }
+
+    .about-portion .about-p {
+      font-size: 13px;
+    }
+    
+
+    /*PORTFOLIO PORTION*/
+
+    .portfolio-portion p {
+      text-align: center;
+       margin-top: -32px; 
+       margin-bottom: 50px;
+      }
+    
+      .portfolio-container {
+        display: block;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .projects {
+        text-align: left;
+        flex-direction: column;
+        width: 375px;
+        height: 480px;
+        border: 1px solid gainsboro;
+        margin: 0 10px;
+        margin-left: 19px;
+        margin-bottom: 20px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+        box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+      }
+    
+      .projects video {
+        border-radius: 3px;
+      }
+    
+      .card-body {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+      .card-body h5 {
+        font-size: 23px;
+        margin-bottom: 5%;
+      }
+    
+      .card-body p1 {
+        font-size: 17px;
+        margin-right: 20px;
+      }
+      
+      .portfolio-portion p {
+        font-size: 13px;
+      }
+
+      /*SERVICE PORTION*/
+
+      .service-portion {
+        margin-top: 110px;
+        }
+
+        .service-portion p {
+          font-size: 12px;
+        }
+
+        .service-container h3 {
+          font-size: 30px;
+        }
+
+
+   /* SKILL PORTION */
+
+   .skill-portion p {
+    font-size: 13px;;
+   }
+  
+   .skills-container {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .skills {
+    margin-left: -4px;
+    padding: 15px;
+    border: solid 1px gainsboro;
+    background-color: #eeeeee;
+    margin-bottom: 40px;
+    border-radius: 25px;
+    width: 80%;
+    box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+  }
+  
+  .flex-container-1 {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: -200px;
+  }
+  
+  .flex-container-2 {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: -184px;
+  }
+  
+  .flex-item {
+    flex: 1;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+
+  /*CONTACT PORTION*/
+
+  .contact-portion {
+    margin-top: 100px;
+  }
+   
+  .contact-portion p {
+    font-size: 13px;
+  }
+
+   /* Adjust .message-box inputs and textarea */
+   .message-box input[type="text"],
+   .message-box input[type="email"],
+   .message-box textarea {
+       width: 80%;
+       padding: 8px;
+   }
+
+   /* Adjust social media bar at the end */
+   .social-media-bar-end {
+       margin-right: 10px;
+   }
+   .social-logo-end h1 {
+    font-size: 14px;
+    margin-top: 13px;
+  }
+
+   .end #branding {
+       margin-left: 10px;
+   }
+
+   .end #branding p1 {
+    color: black;
+    font-size: 14px;
+    }
+
+    .social-logo-end .highlight {
+      font-size: 14px;
+      }
+}
+
+@media (min-width: 490px) and (max-width: 550px) {
+
+  html {
+    justify-content: center;
+    overflow-x: hidden;
+  }
+   /* Adjust header styles */
+   header {
+       padding-top: 10px;
+       min-height: 40px;
+   }
+   header #branding h1 {
+       font-size: 24px;
+       margin-left: 30px;
+       font-weight: bold;
+   }
+   header nav {
+       margin-right: 10px;
+   }
+
+   h3 {
+    font-size: 30px;
+   }
+
+   /* Adjust .info and .my-picture sections */
+   .container-info {
+    margin-top: 60px;
+   }
+
+   .info {
+       margin: 20px;
+       padding-top: 30px;
+       margin-left: 55px;
+       margin-right: -130px;
+   }
+
+   .info h2 {
+    font-size: 33px;
+    }
+    
+    .info h1 {
+    font-size: 42px;
+    color: orange;
+
+    }
+    
+    .info p {
+    font-size: 16px;
+    margin-bottom: -6px;
+    }
+    
+    .info button {
+     width: 188px;
+     height: 50px;
+     margin-bottom: -18px;
+
+    }
+
+    .social-media-bar {
+      padding: 10px 0;
+      margin-left: 55px;
+      }
+      
+
+   .my-picture {
+       float: none;
+       padding-top: 70px;
+       margin-right: 90px;
+       margin-left: -137px;
+   }
+
+   .my-picture img {
+       margin-top: 410px;
+       width: 330px; 
+       margin-left: -50px;
+   }
+
+   /* Adjust .about-container, .service-container, .skills, .contact-container */
+   .about-container, .service-container, .skills, .contact-container {
+       width: 90%;
+       margin-left: 19px;
+       margin: 0 auto;
+   }
+
+   /*ABOUT PORTION*/
+   
+   .about-container {
+    display: block;
+    height: 640px;
+   }
+
+   .about-me p4 {
+    font-size: 19px;
+    font-weight: bold;
+    }
+    
+    .about-me p {
+    font-size: 14px;
+    margin-bottom: -7px;
+    }
+    
+    .about-picture {
+      margin-left: 105px;   
+    }
+    
+    .about-me {
+      margin-right: 10px;
+      margin-top: 30px;
+      flex: 1 1 auto;
+      margin-left: 30px;
+    }
+    
+    .about-picture img {
+      width: 60%;
+      margin-top: 25px;
+      border-radius: 10px;
+    }
+
+    .about-portion .about-p {
+      font-size: 13px;
+    }
+    
+
+    /*PORTFOLIO PORTION*/
+
+    .portfolio-portion p {
+      text-align: center;
+       margin-top: -32px; 
+       margin-bottom: 50px;
+      }
+    
+      .portfolio-container {
+        display: block;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .projects {
+        text-align: left;
+        flex-direction: column;
+        width: 375px;
+        height: 480px;
+        border: 1px solid gainsboro;
+        margin: 0 10px;
+        margin-left: 19px;
+        margin-bottom: 20px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+        box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+      }
+    
+      .projects video {
+        border-radius: 3px;
+      }
+    
+      .card-body {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+      .card-body h5 {
+        font-size: 23px;
+        margin-bottom: 5%;
+      }
+    
+      .card-body p1 {
+        font-size: 17px;
+        margin-right: 20px;
+      }
+      
+      .portfolio-portion p {
+        font-size: 13px;
+      }
+
+      /*SERVICE PORTION*/
+
+      .service-portion {
+        margin-top: 110px;
+        }
+
+        .service-portion p {
+          font-size: 12px;
+        }
+
+        .service-container h3 {
+          font-size: 30px;
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+
+
+   /* SKILL PORTION */
+
+   .skill-portion p {
+    font-size: 13px;;
+   }
+  
+   .skills-container {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .skills {
+    margin-left: -4px;
+    padding: 15px;
+    border: solid 1px gainsboro;
+    background-color: #eeeeee;
+    margin-bottom: 40px;
+    border-radius: 25px;
+    width: 80%;
+    box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+  }
+  
+  .flex-container-1 {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: -200px;
+  }
+  
+  .flex-container-2 {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: -184px;
+  }
+  
+  .flex-item {
+    flex: 1;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+
+  /*CONTACT PORTION*/
+
+  .contact-portion {
+    margin-top: 100px;
+  }
+   
+  .contact-portion p {
+    font-size: 13px;
+  }
+
+   /* Adjust .message-box inputs and textarea */
+   .message-box input[type="text"],
+   .message-box input[type="email"],
+   .message-box textarea {
+       width: 80%;
+       padding: 8px;
+   }
+
+   /* Adjust social media bar at the end */
+   .social-media-bar-end {
+       margin-right: 10px;
+   }
+   .social-logo-end h1 {
+    font-size: 14px;
+    margin-top: 13px;
+  }
+
+   .end #branding {
+       margin-left: 10px;
+   }
+
+   .end #branding p1 {
+    color: black;
+    font-size: 14px;
+    }
+
+    .social-logo-end .highlight {
+      font-size: 14px;
+      }
+}
+
+@media (min-width: 550px) and (max-width: 789px) {
+
+  html {
+    justify-content: center;
+    overflow-x: hidden;
+  }
+   /* Adjust header styles */
+   header {
+       padding-top: 10px;
+       min-height: 40px;
+   }
+   header #branding h1 {
+       font-size: 24px;
+       margin-left: 75px;
+       font-weight: bold;
+   }
+   header nav {
+       margin-right: 75px;
+   }
+
+   h3 {
+    font-size: 40px;
+   }
+
+   /* Adjust .info and .my-picture sections */
+   .container-info {
+    margin-top: 60px;
+   }
+
+   .info {
+       margin: 20px;
+       padding-top: 30px;
+       margin-left: 80px;
+       margin-right: -130px;
+       justify-content: center;
+   }
+
+   .info h2 {
+    font-size: 40px;
+    }
+    
+    .info h1 {
+    font-size: 49px;
+    color: orange;
+
+    }
+    
+    .info p {
+    font-size: 20px;
+    margin-bottom: -6px;
+    }
+    
+    .info button {
+     width: 188px;
+     height: 50px;
+     margin-bottom: -23px;
+
+    }
+
+    .social-media-bar {
+      padding: 15px 0;
+      margin-left: 75px;
+      }
+      
+
+   .my-picture {
+       float: none;
+       padding-top: 150px;
+       margin-right: 90px;
+       margin-left: -137px;
+   }
+
+   .my-picture img {
+       margin-top: 410px;
+       width: 370px; 
+       margin-left: -20px;
+   }
+
+   /* Adjust .about-container, .service-container, .skills, .contact-container */
+   .about-container, .service-container, .skills, .contact-container {
+       width: 90%;
+       margin-left: 19px;
+       margin: 0 auto;
+   }
+
+   /*ABOUT PORTION*/
+   
+   .about-container {
+    display: block;
+    height: 600px;
+   }
+
+   .about-me p4 {
+    font-size: 19px;
+    font-weight: bold;
+    }
+    
+    .about-me p {
+    font-size: 16px;
+    margin-bottom: -7px;
+    }
+    
+    .about-picture {
+      text-align: center;  
+    }
+    
+    .about-me {
+      margin-right: 70px;
+      margin-top: 30px;
+      flex: 1 1 auto;
+      margin-left: 30px;
+    }
+    
+    .about-picture img {
+      width: 30%;
+      margin-top: 25px;
+      border-radius: 10px;
+    }
+
+    .about-portion .about-p {
+      font-size: 16px;
+    }
+    
+
+    /*PORTFOLIO PORTION*/
+
+    .portfolio-portion p {
+      text-align: center;
+       margin-top: -32px; 
+       margin-bottom: 50px;
+      }
+    
+      .portfolio-container {
+        display: block;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .projects {
+        text-align: left;
+        flex-direction: column;
+        width: 420px;
+        height: 530px;
+        border: 1px solid gainsboro;
+        margin: 0 10px;
+        margin-left: 19px;
+        margin-bottom: 30px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+        box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+      }
+    
+      .projects video {
+        border-radius: 3px;
+      }
+    
+      .card-body {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+      .card-body h5 {
+        font-size: 25px;
+        margin-bottom: 5%;
+      }
+    
+      .card-body p1 {
+        font-size: 19px;
+        margin-right: 20px;
+      }
+      
+      .portfolio-portion p {
+        font-size: 16px;
+      }
+
+      /*SERVICE PORTION*/
+
+      .service-portion {
+        margin-top: 110px;
+        }
+
+        .service-portion p {
+          font-size: 16px;
+        }
+
+        .service-container h3 {
+          font-size: 30px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+
+
+   /* SKILL PORTION */
+
+   .skill-portion p {
+    font-size: 16px;;
+   }
+  
+   .skills-container {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .skills {
+    margin-left: -4px;
+    padding: 15px;
+    border: solid 1px gainsboro;
+    background-color: #eeeeee;
+    margin-bottom: 40px;
+    border-radius: 25px;
+    width: 60%;
+    box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+  }
+  
+  .flex-container-1 {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: -200px;
+  }
+  
+  .flex-container-2 {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: -184px;
+  }
+  
+  .flex-item {
+    flex: 1;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+
+  .skills img {
+    width: 80%;
+  }
+  
+
+  /*CONTACT PORTION*/
+
+  .contact-portion {
+    margin-top: 100px;
+  }
+   
+  .contact-portion p {
+    font-size: 16px;
+  }
+
+   /* Adjust .message-box inputs and textarea */
+   .message-box input[type="text"],
+   .message-box input[type="email"],
+   .message-box textarea {
+       width: 80%;
+       padding: 8px;
+   }
+
+   /* Adjust social media bar at the end */
+   .social-media-bar-end {
+       margin-right: 10px;
+   }
+   .social-logo-end h1 {
+    font-size: 17px;
+    margin-top: 13px;
+  }
+
+   .end #branding {
+       margin-left: 10px;
+   }
+
+   .end #branding p1 {
+    color: black;
+    font-size: 17px;
+    }
+
+    .social-logo-end .highlight {
+      font-size: 17px;
+      }
+}
+
+@media (min-width: 789px) and (max-width: 975px) { 
+
+  html {
+    justify-content: center;
+    overflow-x: hidden;
+  }
+   /* Adjust header styles */
+   header {
+       padding-top: 10px;
+       min-height: 40px;
+   }
+   header #branding h1 {
+       font-size: 24px;
+       margin-left: 75px;
+       font-weight: bold;
+   }
+   header nav {
+       margin-right: 75px;
+   }
+
+   h3 {
+    font-size: 40px;
+   }
+
+   /* Adjust .info and .my-picture sections */
+   .container-info {
+    margin-top: 60px;
+   }
+
+   .info {
+       margin: 18px;
+       padding-top: 30px;
+       margin-left: 80px;
+       margin-right: 155px;
+       justify-content: center;
+   }
+
+   .info h2 {
+    font-size: 20px;
+    }
+    
+    .info h1 {
+    font-size: 28px;
+    color: orange;
+
+    }
+    
+    .info p {
+    font-size: 13px;
+    margin-bottom: -6px;
+    }
+    
+    .info button {
+     width: 180px;
+     height: 45px;
+     margin-bottom: -23px;
+
+    }
+
+    .social-media-bar {
+      padding: 15px 0;
+      margin-left: 75px;
+      }
+      
+
+   .my-picture {
+       float: right;
+       margin-left: -1px;
+   }
+
+   .my-picture img {
+       width: 290px; 
+       margin-right: 15px;
+   }
+
+   /* Adjust .about-container, .service-container, .skills, .contact-container */
+   .about-container, .service-container, .skills, .contact-container {
+       width: 90%;
+       margin-left: 19px;
+       margin: 0 auto;
+   }
+
+   /*ABOUT PORTION*/
+   
+   .about-container {
+    display: block;
+    height: 600px;
+   }
+
+   .about-me p4 {
+    font-size: 19px;
+    font-weight: bold;
+    }
+    
+    .about-me p {
+    font-size: 16px;
+    margin-bottom: -7px;
+    }
+    
+    .about-picture {
+      text-align: center;  
+    }
+    
+    .about-me {
+      margin-right: 70px;
+      margin-top: 30px;
+      flex: 1 1 auto;
+      margin-left: 30px;
+    }
+    
+    .about-picture img {
+      width: 30%;
+      margin-top: 25px;
+      border-radius: 10px;
+    }
+
+    .about-portion .about-p {
+      font-size: 16px;
+    }
+    
+
+    /*PORTFOLIO PORTION*/
+    .portfolio-portion p {
+      text-align: center;
+       margin-top: -32px; 
+       margin-bottom: 50px;
+      }
+    
+      .portfolio-container {
+        display: block;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .projects {
+        text-align: left;
+        flex-direction: column;
+        width: 420px;
+        height: 530px;
+        border: 1px solid gainsboro;
+        margin: 0 10px;
+        margin-left: 19px;
+        margin-bottom: 30px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+        box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+      }
+    
+      .projects video {
+        border-radius: 3px;
+      }
+    
+      .card-body {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+      .card-body h5 {
+        font-size: 25px;
+        margin-bottom: 5%;
+      }
+    
+      .card-body p1 {
+        font-size: 19px;
+        margin-right: 20px;
+      }
+      
+      .portfolio-portion p {
+        font-size: 16px;
+      }
+
+      /*SERVICE PORTION*/
+
+      .service-portion {
+        margin-top: 110px;
+        }
+
+        .service-portion p {
+          font-size: 16px;
+        }
+
+        .service-container h3 {
+          font-size: 30px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+
+
+   /* SKILL PORTION */
+
+   .skill-portion p {
+    font-size: 16px;;
+   }
+  
+   .skills-container {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .skills {
+    margin-left: -4px;
+    padding: 15px;
+    border: solid 1px gainsboro;
+    background-color: #eeeeee;
+    margin-bottom: 40px;
+    border-radius: 25px;
+    width: 50%;
+    box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201, 201, 201, 1);
+  }
+  
+  .flex-container-1 {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: -200px;
+  }
+  
+  .flex-container-2 {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: -184px;
+  }
+  
+  .flex-item {
+    flex: 1;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+
+  .skills img {
+    width: 60%;
+  }
+
+  /*CONTACT PORTION*/
+
+  .contact-portion {
+    margin-top: 100px;
+  }
+   
+  .contact-portion p {
+    font-size: 16px;
+  }
+
+   /* Adjust .message-box inputs and textarea */
+   .message-box input[type="text"],
+   .message-box input[type="email"],
+   .message-box textarea {
+       width: 50%;
+       padding: 8px;
+   }
+
+   /* Adjust social media bar at the end */
+   .social-media-bar-end {
+       margin-right: 10px;
+   }
+   .social-logo-end h1 {
+    font-size: 17px;
+    margin-top: 13px;
+  }
+
+   .end #branding {
+       margin-left: 10px;
+   }
+
+   .end #branding p1 {
+    color: black;
+    font-size: 17px;
+    }
+
+    .social-logo-end .highlight {
+      font-size: 17px;
+      }
+}
+
+@media (min-width: 975px) and (max-width: 1045px) { 
+
+  html {
+    justify-content: center;
+    overflow-x: hidden;
+  }
+   /* Adjust header styles */
+   header {
+       padding-top: 10px;
+       min-height: 40px;
+   }
+   header #branding h1 {
+       font-size: 24px;
+       margin-left: 75px;
+       font-weight: bold;
+   }
+   header nav {
+       margin-right: 75px;
+   }
+
+   h3 {
+    font-size: 40px;
+   }
+
+   /* Adjust .info and .my-picture sections */
+   .container-info {
+    margin-top: 60px;
+   }
+
+   .info {
+       margin: 20px;
+       padding-top: 30px;
+       margin-left: 80px;
+       margin-right: 135px;
+       justify-content: center;
+   }
+
+   .info h2 {
+    font-size: 35px;
+    }
+    
+    .info h1 {
+    font-size: 44px;
+    color: orange;
+
+    }
+    
+    .info p {
+    font-size: 17px;
+    margin-bottom: -6px;
+    }
+    
+    .info button {
+     width: 188px;
+     height: 50px;
+     margin-bottom: -23px;
+
+    }
+
+    .social-media-bar {
+      padding: 15px 0;
+      margin-left: 75px;
+      }
+      
+
+   .my-picture {
+       float: right;
+       margin-left: -1px;
+   }
+
+   .my-picture img {
+       width: 370px; 
+       margin-right: 15px;
+   }
+
+   /* Adjust .about-container, .service-container, .skills, .contact-container */
+   .about-container, .service-container, .skills, .contact-container {
+       width: 90%;
+       margin-left: 19px;
+       margin: 0 auto;
+   }
+
+   /*ABOUT PORTION*/
+   
+   .about-container {
+    width: 80%;
+    height: 515px;
+    margin: 0 auto;
+    border-radius: 15px;
+    position: relative;
+    border-width: 3px;
+    display: flex;
+    }
+    
+    .about-me p4 {
+    font-size: 30px;
+    font-weight: bold;
+    }
+    
+    .about-me p {
+    font-size: 16px;
+    }
+    
+    .about-picture {
+      float: left;
+      margin-left: 10px;
+      
+    }
+    
+    .about-me {
+      float: right;
+      margin-right: 35px;
+      margin-top: 80px;
+      flex: 1 1 auto;
+      margin-left: -50px;
+    }
+    
+    .about-picture img {
+      width: 77%;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    .about-portion .about-p {
+      font-size: 16px;
+    }
+    
+
+    /*PORTFOLIO PORTION*/
+
+    .portfolio-portion p {
+      text-align: center;
+       margin-top: -32px; 
+       margin-bottom: 50px;
+      }
+    
+      .portfolio-container {
+        display: inline-flex;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .projects {
+        text-align: left;
+        flex-direction: column;
+        width: 300px;
+        height: 490px;
+        border: 1px solid gainsboro;
+        margin: 0 10px;
+        margin-left: 19px;
+        margin-bottom: 30px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+        box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+      }
+    
+      .projects video {
+        border-radius: 3px;
+      }
+    
+      .card-body {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+      .card-body h5 {
+        font-size: 25px;
+        margin-bottom: 5%;
+      }
+    
+      .card-body p1 {
+        font-size: 17px;
+        margin-right: 20px;
+      }
+      
+      .portfolio-portion p {
+        font-size: 16px;
+      }
+
+      /*SERVICE PORTION*/
+
+      .service-portion {
+        margin-top: 110px;
+        }
+
+        .service-portion p {
+          font-size: 16px;
+        }
+
+        .service-container h3 {
+          font-size: 30px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+
+
+   /* SKILL PORTION */
+
+   .skill-portion p {
+    font-size: 16px;;
+   }
+  
+   .skill-portion {
+    margin-top: 140px;
+    }
+    
+    .skills-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    .skills {
+    padding: 15px;
+    border: solid 1px gainsboro;
+    background-color: #eeeeee;
+    margin-bottom: 14px;
+    border-radius: 25px;
+    display: inline-flex;
+    width: 28%;
+    height: 340px;
+    box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    }
+    
+    .skills-name {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: -315px;
+      margin-left: 25px;
+    }
+    
+    .skills h1 {
+      font-size: 23px;
+      margin-left: 30px;
+    }
+    
+    .skill-portion p {
+      color: black; 
+      text-align: center;
+       margin-top: -32px; 
+       margin-bottom: 50px;
+      }
+    
+    .flex-container-1 {
+      display: flex;
+      justify-content: space-evenly; /* Adjust as needed */
+      align-items: center;
+      padding: 20px;
+      margin-top: -110px;
+      margin-left: -200px;
+    }
+    
+    .flex-container-2 {
+      display: flex;
+      justify-content: space-evenly; /* Adjust as needed */
+      align-items: center;
+      padding: 20px;
+      margin-top: -110px;
+      margin-left: -184px;
+    }
+    
+    .flex-item {
+      flex: 1;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    
+    .flex-item p {
+      font-weight: bolder;
+      font-size: 13px;
+      margin-top: -3px;
+      margin-left: -6px;
+    }
+    
+    .flex-item img {
+      width: 55px;
+      height: auto;
+      margin-right: 12px;
+    }
+    
+    .flex-item:hover {
+      transform: scale(1.2);
+      }
+    
+  
+
+  /*CONTACT PORTION*/
+
+  .contact-portion {
+    margin-top: 100px;
+  }
+   
+  .contact-portion p {
+    font-size: 16px;
+  }
+
+   /* Adjust .message-box inputs and textarea */
+   .message-box input[type="text"],
+   .message-box input[type="email"],
+   .message-box textarea {
+       width: 50%;
+       padding: 8px;
+   }
+
+   /* Adjust social media bar at the end */
+   .social-media-bar-end {
+       margin-right: 10px;
+   }
+   .social-logo-end h1 {
+    font-size: 17px;
+    margin-top: 13px;
+  }
+
+   .end #branding {
+       margin-left: 10px;
+   }
+
+   .end #branding p1 {
+    color: black;
+    font-size: 17px;
+    }
+
+    .social-logo-end .highlight {
+      font-size: 17px;
+      }
+}
+
+@media (min-width: 1045px) and (max-width: 1101px) { 
+
+  html {
+    justify-content: center;
+    overflow-x: hidden;
+  }
+   /* Adjust header styles */
+   header {
+       padding-top: 10px;
+       min-height: 40px;
+   }
+   header #branding h1 {
+       font-size: 24px;
+       margin-left: 75px;
+       font-weight: bold;
+   }
+   header nav {
+       margin-right: 75px;
+   }
+
+   h3 {
+    font-size: 40px;
+   }
+
+   /* Adjust .info and .my-picture sections */
+   .container-info {
+    margin-top: 60px;
+   }
+
+   .info {
+       margin: 20px;
+       padding-top: 30px;
+       margin-left: 80px;
+       margin-right: 150px;
+       justify-content: center;
+   }
+
+   .info h2 {
+    font-size: 35px;
+    }
+    
+    .info h1 {
+    font-size: 44px;
+    color: orange;
+
+    }
+    
+    .info p {
+    font-size: 17px;
+    margin-bottom: -6px;
+    }
+    
+    .info button {
+     width: 188px;
+     height: 50px;
+     margin-bottom: -23px;
+
+    }
+
+    .social-media-bar {
+      padding: 15px 0;
+      margin-left: 75px;
+      }
+      
+
+   .my-picture {
+       float: right;
+       margin-left: -1px;
+   }
+
+   .my-picture img {
+       width: 370px; 
+       margin-right: 15px;
+   }
+
+   /* Adjust .about-container, .service-container, .skills, .contact-container */
+   .about-container, .service-container, .skills, .contact-container {
+       width: 90%;
+       margin-left: 19px;
+       margin: 0 auto;
+   }
+
+   /*ABOUT PORTION*/
+   
+   .about-container {
+    width: 80%;
+    height: 515px;
+    margin: 0 auto;
+    border-radius: 15px;
+    position: relative;
+    border-width: 3px;
+    display: flex;
+    }
+    
+    .about-me p4 {
+    font-size: 30px;
+    font-weight: bold;
+    }
+    
+    .about-me p {
+    font-size: 16px;
+    }
+    
+    .about-picture {
+      float: left;
+      margin-left: 10px;
+      
+    }
+    
+    .about-me {
+      float: right;
+      margin-right: 35px;
+      margin-top: 80px;
+      flex: 1 1 auto;
+      margin-left: -50px;
+    }
+    
+    .about-picture img {
+      width: 77%;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    .about-portion .about-p {
+      font-size: 16px;
+    }
+    
+
+    /*PORTFOLIO PORTION*/
+
+    .portfolio-portion p {
+      text-align: center;
+       margin-top: -32px; 
+       margin-bottom: 50px;
+      }
+    
+      .portfolio-container {
+        display: inline-flex;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .projects {
+        text-align: left;
+        flex-direction: column;
+        width: 300px;
+        height: 490px;
+        border: 1px solid gainsboro;
+        margin: 0 10px;
+        margin-left: 19px;
+        margin-bottom: 30px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+        box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+      }
+    
+      .projects video {
+        border-radius: 3px;
+      }
+    
+      .card-body {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+      .card-body h5 {
+        font-size: 25px;
+        margin-bottom: 5%;
+      }
+    
+      .card-body p1 {
+        font-size: 17px;
+        margin-right: 20px;
+      }
+      
+      .portfolio-portion p {
+        font-size: 16px;
+      }
+
+      /*SERVICE PORTION*/
+
+      .service-portion {
+        margin-top: 110px;
+        }
+
+        .service-portion p {
+          font-size: 16px;
+        }
+
+        .service-container h3 {
+          font-size: 30px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+
+
+   /* SKILL PORTION */
+
+   .skill-portion p {
+    font-size: 16px;;
+   }
+  
+   .skill-portion {
+    margin-top: 140px;
+    }
+    
+    .skills-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    .skills {
+    padding: 15px;
+    border: solid 1px gainsboro;
+    background-color: #eeeeee;
+    margin-bottom: 14px;
+    border-radius: 25px;
+    display: inline-flex;
+    width: 28%;
+    height: 340px;
+    box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    }
+    
+    .skills-name {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: -315px;
+      margin-left: 25px;
+    }
+    
+    .skills h1 {
+      font-size: 23px;
+      margin-left: 30px;
+    }
+    
+    .skill-portion p {
+      color: black; 
+      text-align: center;
+       margin-top: -32px; 
+       margin-bottom: 50px;
+      }
+    
+    .flex-container-1 {
+      display: flex;
+      justify-content: space-evenly; /* Adjust as needed */
+      align-items: center;
+      padding: 20px;
+      margin-top: -110px;
+      margin-left: -200px;
+    }
+    
+    .flex-container-2 {
+      display: flex;
+      justify-content: space-evenly; /* Adjust as needed */
+      align-items: center;
+      padding: 20px;
+      margin-top: -110px;
+      margin-left: -184px;
+    }
+    
+    .flex-item {
+      flex: 1;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    
+    .flex-item p {
+      font-weight: bolder;
+      font-size: 13px;
+      margin-top: -3px;
+      margin-left: -6px;
+    }
+    
+    .flex-item img {
+      width: 55px;
+      height: auto;
+      margin-right: 12px;
+    }
+    
+    .flex-item:hover {
+      transform: scale(1.2);
+      }
+    
+  
+
+  /*CONTACT PORTION*/
+
+  .contact-portion {
+    margin-top: 100px;
+  }
+   
+  .contact-portion p {
+    font-size: 16px;
+  }
+
+   /* Adjust .message-box inputs and textarea */
+   .message-box input[type="text"],
+   .message-box input[type="email"],
+   .message-box textarea {
+       width: 50%;
+       padding: 8px;
+   }
+
+   /* Adjust social media bar at the end */
+   .social-media-bar-end {
+       margin-right: 10px;
+   }
+   .social-logo-end h1 {
+    font-size: 17px;
+    margin-top: 13px;
+  }
+
+   .end #branding {
+       margin-left: 10px;
+   }
+
+   .end #branding p1 {
+    color: black;
+    font-size: 17px;
+    }
+
+    .social-logo-end .highlight {
+      font-size: 17px;
+      }
+}
+
+@media (min-width: 1045px) and (max-width: 1334px) { 
+
+  html {
+    justify-content: center;
+    overflow-x: hidden;
+  }
+   /* Adjust header styles */
+   header {
+       padding-top: 10px;
+       min-height: 40px;
+   }
+   header #branding h1 {
+       font-size: 24px;
+       margin-left: 75px;
+       font-weight: bold;
+   }
+   header nav {
+       margin-right: 75px;
+   }
+
+   h3 {
+    font-size: 40px;
+   }
+
+   /* Adjust .info and .my-picture sections */
+   .container-info {
+    margin-top: 60px;
+   }
+
+   .info {
+       margin: 20px;
+       padding-top: 30px;
+       margin-left: 80px;
+       margin-right: 455px;
+       justify-content: center;
+   }
+
+   .info h2 {
+    font-size: 35px;
+    }
+    
+    .info h1 {
+    font-size: 44px;
+    color: orange;
+
+    }
+    
+    .info p {
+    font-size: 17px;
+    margin-bottom: -6px;
+    }
+    
+    .info button {
+     width: 188px;
+     height: 50px;
+     margin-bottom: -23px;
+
+    }
+
+    .social-media-bar {
+      padding: 15px 0;
+      margin-left: 75px;
+      }
+      
+
+   .my-picture {
+       float: right;
+       margin-left: -1px;
+   }
+
+   .my-picture img {
+       width: 370px; 
+       margin-right: 15px;
+   }
+
+   /* Adjust .about-container, .service-container, .skills, .contact-container */
+   .about-container, .service-container, .skills, .contact-container {
+       width: 90%;
+       margin-left: 19px;
+       margin: 0 auto;
+   }
+
+   /*ABOUT PORTION*/
+   
+   .about-container {
+    width: 80%;
+    height: 515px;
+    margin: 0 auto;
+    border-radius: 15px;
+    position: relative;
+    border-width: 3px;
+    display: flex;
+    }
+    
+    .about-me p4 {
+    font-size: 30px;
+    font-weight: bold;
+    }
+    
+    .about-me p {
+    font-size: 16px;
+    }
+    
+    .about-picture {
+      float: left;
+      margin-left: 10px;
+      
+    }
+    
+    .about-me {
+      float: right;
+      margin-right: 35px;
+      margin-top: 80px;
+      flex: 1 1 auto;
+      margin-left: -150px;
+    }
+    
+    .about-picture img {
+      width: 57%;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    .about-portion .about-p {
+      font-size: 16px;
+    }
+    
+
+    /*PORTFOLIO PORTION*/
+
+    .portfolio-portion p {
+      text-align: center;
+       margin-top: -32px; 
+       margin-bottom: 50px;
+      }
+    
+      .portfolio-container {
+        display: inline-flex;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .projects {
+        text-align: left;
+        flex-direction: column;
+        width: 400px;
+        height: 490px;
+        border: 1px solid gainsboro;
+        margin: 0 10px;
+        margin-left: 25px;
+        margin-bottom: 30px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+        box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+      }
+    
+      .projects video {
+        border-radius: 3px;
+      }
+    
+      .card-body {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+      .card-body h5 {
+        font-size: 25px;
+        margin-bottom: 5%;
+      }
+    
+      .card-body p1 {
+        font-size: 17px;
+        margin-right: 20px;
+      }
+      
+      .portfolio-portion p {
+        font-size: 16px;
+      }
+
+      /*SERVICE PORTION*/
+
+      .service-portion {
+        margin-top: 110px;
+        }
+
+        .service-portion p {
+          font-size: 16px;
+        }
+
+        .service-container h3 {
+          font-size: 30px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+
+
+   /* SKILL PORTION */
+
+   .skill-portion p {
+    font-size: 16px;;
+   }
+  
+   .skill-portion {
+    margin-top: 140px;
+    }
+    
+    .skills-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    .skills {
+    padding: 15px;
+    border: solid 1px gainsboro;
+    background-color: #eeeeee;
+    margin-bottom: 14px;
+    border-radius: 25px;
+    display: inline-flex;
+    width: 28%;
+    height: 340px;
+    box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -webkit-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    -moz-box-shadow: -1px 9px 16px 11px rgba(201,201,201,1);
+    }
+    
+    .skills-name {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: -315px;
+      margin-left: 25px;
+    }
+    
+    .skills h1 {
+      font-size: 23px;
+      margin-left: 30px;
+    }
+    
+    .skill-portion p {
+      color: black; 
+      text-align: center;
+       margin-top: -32px; 
+       margin-bottom: 50px;
+      }
+    
+    .flex-container-1 {
+      display: flex;
+      justify-content: space-evenly; /* Adjust as needed */
+      align-items: center;
+      padding: 20px;
+      margin-top: -110px;
+      margin-left: -200px;
+    }
+    
+    .flex-container-2 {
+      display: flex;
+      justify-content: space-evenly; /* Adjust as needed */
+      align-items: center;
+      padding: 20px;
+      margin-top: -110px;
+      margin-left: -184px;
+    }
+    
+    .flex-item {
+      flex: 1;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    
+    .flex-item p {
+      font-weight: bolder;
+      font-size: 13px;
+      margin-top: -3px;
+      margin-left: -6px;
+    }
+    
+    .flex-item img {
+      width: 70px;
+      height: auto;
+      margin-right: 12px;
+    }
+    
+    .flex-item:hover {
+      transform: scale(1.2);
+      }
+    
+  
+
+  /*CONTACT PORTION*/
+
+  .contact-portion {
+    margin-top: 100px;
+  }
+   
+  .contact-portion p {
+    font-size: 16px;
+  }
+
+   /* Adjust .message-box inputs and textarea */
+   .message-box input[type="text"],
+   .message-box input[type="email"],
+   .message-box textarea {
+       width: 50%;
+       padding: 8px;
+   }
+
+   /* Adjust social media bar at the end */
+   .social-media-bar-end {
+       margin-right: 10px;
+   }
+   .social-logo-end h1 {
+    font-size: 17px;
+    margin-top: 13px;
+  }
+
+   .end #branding {
+       margin-left: 10px;
+   }
+
+   .end #branding p1 {
+    color: black;
+    font-size: 17px;
+    }
+
+    .social-logo-end .highlight {
+      font-size: 17px;
+      }
+}
+
+@media (min-width: 1334px) and (max-width: 1440px) {
+  .info h2 {
+    font-size: 33px;
+    }
+    
+    .info h1 {
+    font-size: 42px;
+    color: orange;
+
+    }
+    
+    .info p {
+    font-size: 17px;
+    margin-bottom: -6px;
+    }
+
+    .about-picture img {
+      width: 52%;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+}
